@@ -9,7 +9,7 @@ const Header = () => {
       id="Header"
     >
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/50"/>
 
       <motion.div
         initial={{ opacity: 0, y: 100 }}
@@ -26,7 +26,7 @@ const Header = () => {
           viewport={{ once: false }}
           className="inline-block bg-blue-500/30 border border-blue-400 text-blue-200 text-xs sm:text-sm px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase"
         >
-          Trusted IT Partner Since 2015
+          Trusted IT Partner Since 2014
         </motion.span>
 
         {/* Main Heading */}
@@ -52,7 +52,7 @@ const Header = () => {
             <p className="text-xs sm:text-sm text-gray-300">Years Experience</p>
           </div>
           <div>
-            <p className="text-3xl font-bold text-blue-400">12+</p>
+            <p className="text-3xl font-bold text-blue-400">40+</p>
             <p className="text-xs sm:text-sm text-gray-300">Projects Done</p>
           </div>
           <div>
