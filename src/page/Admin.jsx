@@ -9,10 +9,14 @@ const Admin = () => {
 
     const announcements = useSelector((state) => state.announcement.value);
 
+    const sorted = [...announcements]
+        .map((item, originalIndex) => ({ ...item, originalIndex }))
+        .sort((a, b) => b.toShow - a.toShow);
+
     const handleLogout = () => {
-        logout()
-        navigate("/")
-    }
+        logout();
+        navigate("/");
+    };
 
     return (
         <div className="px-4 sm:px-6 lg:px-10 min-h-screen bg-gray-50">
@@ -54,9 +58,9 @@ const Admin = () => {
 
             {/* Announcements Grid */}
             <div className="grid grid-cols-1 mb-8 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-                {announcements.map((item, index) => (
+                {sorted.map((item) => (
                     <section
-                        key={index}
+                        key={item.originalIndex}
                         className={`flex flex-col w-full p-4 sm:p-5 border rounded shadow-lg tracking-wide bg-white
                             ${item.toShow ? "border-green-300" : "border-gray-200"}`}
                     >
@@ -69,7 +73,7 @@ const Admin = () => {
                                 {item.position}
                             </span>
                             <button
-                                onClick={() => dispatch(statusUpdate(index))}
+                                onClick={() => dispatch(statusUpdate(item.originalIndex))}
                                 className={`px-4 py-1.5 rounded text-white text-sm transition
                                     ${item.toShow
                                         ? "bg-green-600 hover:bg-green-700"

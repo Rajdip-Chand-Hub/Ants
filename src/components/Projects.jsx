@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { assets, projectsData } from "../assets/assets";
 import { motion } from "framer-motion";
 import Parent from "./ParentLogo";
+import InfiniteScroll from "./InfiniteScroll";
 
 const Projects = () => {
 
@@ -37,15 +38,15 @@ const Projects = () => {
             transition={{ duration: 1 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
-            className="container mx-auto py-4 pt-20 px-6 md:px-20 lg:px-32 my-10 w-full overflow-hidden scroll-mt-10" id='Projects'>
+            className="container mx-auto py-4 px-6 md:px-20 lg:px-32 my-10 w-full overflow-hidden scroll-mt-20" id='Projects'>
             <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-center">Projects  <span className="underline underline-offset-4
             decoration-1 under font-light">Completed</span></h1>
             <p className="text-center text-gray-500 max-w-80 mx-auto mb-4">A showcase of our commitment to
                 quality, creativity, and performance</p>
             <div className="flex justify-center">
-                <Parent/>
+                <Parent />
             </div>
-             
+
             <div className="flex justify-end items-center mb-5">
                 <button onClick={prevProject} className="p-3 bg-gray-200 rounded mr-2" aria-label="Previous Project">
                     <img src={assets.left_arrow} alt="Previous" />
@@ -67,6 +68,9 @@ const Projects = () => {
                         </div>
                     ))}
                 </div>
+            </div>
+            <div className="mt-10 w-full overflow-hidden">
+                <InfiniteScroll />
             </div>
         </motion.div>
     )

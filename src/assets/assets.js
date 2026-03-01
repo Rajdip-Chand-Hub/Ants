@@ -13,6 +13,10 @@ import eduware from './eduware.png'
 import findex from './findex.png'
 import lekha from './lekha.jpg'
 import scholor from './scholor.png'
+import officeImg1 from './office-img-1.jpg'
+import officeImg2 from './office-img-2.jpg'
+import officeImg3 from './office-img-3.jpg'
+import officeImg4 from './office-img-4.png'
 
 export const assets = {
   cross_icon,
@@ -24,8 +28,15 @@ export const assets = {
   logo,
 }
 
+export const projectsImg = [
+  officeImg1,
+  officeImg2,
+  officeImg3,
+  officeImg4,
+]
+
 export const projectsData = [
-    {
+  {
     title: "SmartDoc",
     category: "Process Automation",
     image: smartdoc,
