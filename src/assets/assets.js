@@ -13,10 +13,25 @@ import eduware from './eduware.png'
 import findex from './findex.png'
 import lekha from './lekha.jpg'
 import scholor from './scholor.png'
-import officeImg1 from './office-img-1.jpg'
-import officeImg2 from './office-img-2.jpg'
-import officeImg3 from './office-img-3.jpg'
-import officeImg4 from './office-img-4.png'
+import Garima from './Garima-Logo.png'
+import Goodwill from './Goodwill-Logo.png'
+import Gurkhas from './Gurkhas-Logo.png'
+import HBL from './HBL-Logo.png'
+import Kamana from './Kamana-Logo.png'
+import Lumbini from './Lumbini-Logo.png'
+import Mahalaxmi from './Mahalaxmi-Logo.png'
+import Mukti from './Mukti-Logo.png'
+import Muktinath from './Muktinath-Logo.png'
+import NIMB from './NIMB-Logo.png'
+import Prabhu from './Prabhu-Logo.png'
+import Reliance from './Reliance-Logo.png'
+import Sangrila from './Sangrila-Logo.png'
+import Prime from './Prime-Logo.jfif'
+import Central from './Central-Logo.jfif'
+import National from './National-Logo.jfif'
+import People from './People-Logo.jfif'
+import Sana from './Sana-Logo.jfif'
+
 
 export const assets = {
   cross_icon,
@@ -29,10 +44,24 @@ export const assets = {
 }
 
 export const projectsImg = [
-  officeImg1,
-  officeImg2,
-  officeImg3,
-  officeImg4,
+  Garima,
+  Goodwill,
+  Gurkhas,
+  HBL,
+  Kamana,
+  Lumbini,
+  Mahalaxmi,
+  Mukti,
+  NIMB,
+  Prabhu,
+  Prime,
+  Reliance,
+  Sangrila,
+  Central,
+  National,
+  Muktinath,
+  People,
+  Sana,
 ]
 
 export const projectsData = [
