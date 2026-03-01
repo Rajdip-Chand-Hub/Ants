@@ -26,6 +26,8 @@ import NIMB from './NIMB-Logo.png'
 import Prabhu from './Prabhu-Logo.png'
 import Reliance from './Reliance-Logo.png'
 import Sangrila from './Sangrila-Logo.png'
+import Citizen from './Citizen-Logo.png'
+import PrabhuCo from './PrabhuCo-Logo.png'
 import Prime from './Prime-Logo.jfif'
 import Central from './Central-Logo.jfif'
 import National from './National-Logo.jfif'
@@ -62,6 +64,8 @@ export const projectsImg = [
   Muktinath,
   People,
   Sana,
+  Citizen,
+  PrabhuCo,
 ]
 
 export const projectsData = [
