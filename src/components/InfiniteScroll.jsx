@@ -8,8 +8,8 @@ const InfiniteScroll = () => {
       <div
         className="flex gap-4 w-max"
         style={{ animation: "marquee 20s linear infinite" }}
-        onMouseEnter={e => e.currentTarget.style.animationPlayState = "paused"}
-        onMouseLeave={e => e.currentTarget.style.animationPlayState = "running"}
+        // onMouseEnter={e => e.currentTarget.style.animationPlayState = "paused"}
+        // onMouseLeave={e => e.currentTarget.style.animationPlayState = "running"}
       >
         {duplicated.map((img, index) => (
           <img
