@@ -33,6 +33,7 @@ import Central from './Central-Logo.jfif'
 import National from './National-Logo.jfif'
 import People from './People-Logo.jfif'
 import Sana from './Sana-Logo.jfif'
+import { image, title } from 'framer-motion/client'
 
 
 export const assets = {
@@ -46,26 +47,86 @@ export const assets = {
 }
 
 export const projectsImg = [
-  Garima,
-  Goodwill,
-  Gurkhas,
-  HBL,
-  Kamana,
-  Lumbini,
-  Mahalaxmi,
-  Mukti,
-  NIMB,
-  Prabhu,
-  Prime,
-  Reliance,
-  Sangrila,
-  Central,
-  National,
-  Muktinath,
-  People,
-  Sana,
-  Citizen,
-  PrabhuCo,
+  {
+    title: "Garima Bikas Bank Limited",
+    image: Garima
+  },
+  {
+    title: "Goodwill Finance Limited",
+    image: Goodwill,
+  },
+  {
+    title: "Gurkhas Finance Limited",
+    image: Gurkhas,
+  },
+  {
+    title: "Himalayan Bank Limited",
+    image: HBL,
+  },
+  {
+    title: "Kamana Sewa Bikas Bank Limited",
+    image: Kamana,
+  },
+  {
+    title: "Lumbini Bikas Bank Limited",
+    image: Lumbini,
+  },
+  {
+    title: "Mahalaxmi Bikas Bank Limited",
+    image: Mahalaxmi,
+  },
+  {
+    title: "Muktinath Bikas Bank Limited",
+    image: Mukti,
+  },
+  {
+    title: "Nepal Investment Mega Bank Limited ",
+    image: NIMB,
+  },
+  {
+    title: "Prabhu Bank Limited",
+    image: Prabhu,
+  },
+  {
+    title: "Prime College",
+    image: Prime,
+  },
+  {
+    title: "Reliance Finance Limited",
+    image: Reliance,
+  },
+  {
+    title: "Central Finance Limited",
+    image: Central,
+  },
+  {
+    title: "National Co-operative Bank Limited",
+    image: National,
+  },
+  {
+    title: "Sangrila Bikas Bank Limited",
+    image: Sangrila,
+  },
+  {
+    title: "Muktinath Krishi Company Limited",
+    image: Muktinath,
+  },
+  {
+    title: "People’s Campus",
+    image: People,
+  },
+  {
+    title: "Sana Kisan Bikas Laghubitta Limited",
+    image: Sana,
+  },
+  {
+    title: "Citizens Bank International Limited",
+    image: Citizen,
+  },
+  {
+    title: "Prabhu Co-operative Limited",
+    image: PrabhuCo,
+  },
 ]
 
 export const projectsData = [
