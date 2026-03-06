@@ -33,6 +33,7 @@ import Central from './Central-Logo.jfif'
 import National from './National-Logo.jfif'
 import People from './People-Logo.jfif'
 import Sana from './Sana-Logo.jfif'
+import NEA from './NEA-Logo.jpg'
 import { image, title } from 'framer-motion/client'
 
 
@@ -126,6 +127,10 @@ export const projectsImg = [
   {
     title: "Prabhu Co-operative Limited",
     image: PrabhuCo,
+  },
+  {
+    title: "Nepal Electricity Authority",
+    image: NEA,
   },
 ]
 
