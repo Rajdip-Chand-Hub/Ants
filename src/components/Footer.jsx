@@ -65,14 +65,6 @@ const Footer = () => {
                             Location: Naya Bazaar Marg,<br />
                             Kathmandu 44600
                         </a>
-
-                        <a className="hover:text-white">
-                            Contact: +977 9801907482
-                        </a>
-
-                        <p className="hover:text-white">
-                            Email: manish.manandhar@antsware.com
-                        </p>
                     </div>
                 </div>
             </div>
