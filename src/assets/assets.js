@@ -78,7 +78,7 @@ export const projectsImg = [
   },
   {
     title: "Muktinath Bikas Bank Limited",
-    image: Mukti,
+    image: Muktinath,
   },
   {
     title: "Nepal Investment Mega Bank Limited ",
@@ -110,7 +110,7 @@ export const projectsImg = [
   },
   {
     title: "Muktinath Krishi Company Limited",
-    image: Muktinath,
+    image: Mukti,
   },
   {
     title: "People’s Campus",
