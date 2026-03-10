@@ -1,41 +1,41 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import Parent from "./ParentLogo";
 import InfiniteScroll from "./InfiniteScroll";
 import { projectsData } from "../assets/assets";
 
 const Projects = () => {
-    const [cardsToShow, setCardsToShow] = useState(1);
     const [offset, setOffset] = useState(0);
     const offsetRef = useRef(0);
     const containerRef = useRef(null);
 
-    const getMaxOffset = () => {
+    const getMaxOffset = useCallback(() => {
         if (!containerRef.current) return 0;
-        const cardWidth = containerRef.current.offsetWidth;
-        const gap = 32;
-        const totalWidth = projectsData.length * cardWidth + (projectsData.length - 1) * gap;
-        return totalWidth - cardWidth;
-    };
+        const container = containerRef.current;
+        const inner = container.firstElementChild;
+        if (!inner) return 0;
+        return Math.max(0, inner.scrollWidth - container.offsetWidth);
+    }, []);
 
-    const clampOffset = (val) => Math.max(0, Math.min(val, getMaxOffset()));
+    const clampOffset = useCallback((val) => {
+        return Math.max(0, Math.min(val, getMaxOffset()));
+    }, [getMaxOffset]);
 
-    // Trackpad / mouse wheel horizontal scroll
-    const handleWheel = (e) => {
+    const handleWheel = useCallback((e) => {
         const horizontal = Math.abs(e.deltaX) > Math.abs(e.deltaY);
         if (!horizontal) return;
         e.preventDefault();
         const newOffset = clampOffset(offsetRef.current + e.deltaX);
         offsetRef.current = newOffset;
         setOffset(newOffset);
-    };
+    }, [clampOffset]);
 
     useEffect(() => {
         const el = containerRef.current;
         if (!el) return;
         el.addEventListener("wheel", handleWheel, { passive: false });
         return () => el.removeEventListener("wheel", handleWheel);
-    }, []);
+    }, [handleWheel]);
 
     // Touch
     const startX = useRef(null);
@@ -75,15 +75,6 @@ const Projects = () => {
     };
     const handleMouseUp = () => { isMouseDragging.current = false; };
     const handleMouseLeave = () => { isMouseDragging.current = false; };
-
-    useEffect(() => {
-        const updateCardsShow = () => {
-            setCardsToShow(window.innerWidth >= 1024 ? projectsData.length : 1);
-        };
-        updateCardsShow();
-        window.addEventListener("resize", updateCardsShow);
-        return () => window.removeEventListener("resize", updateCardsShow);
-    }, []);
 
     return (
         <motion.div
