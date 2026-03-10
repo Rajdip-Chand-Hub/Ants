@@ -109,7 +109,7 @@ const Projects = () => {
 
             <div
                 ref={containerRef}
-                className="overflow-hidden cursor-grab active:cursor-grabbing select-none"
+                className="overflow-hidden cursor-pointer active:cursor-pointer select-none"
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}
