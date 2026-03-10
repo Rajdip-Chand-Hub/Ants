@@ -91,7 +91,7 @@ const Projects = () => {
             transition={{ duration: 1 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
-            className="container mx-auto py-4 px-6 md:px-20 lg:px-32 my-10 w-full overflow-hidden scroll-mt-20"
+            className="container mx-auto py-4 px-6 md:px-20 lg:px-32 my-10 w-full overflow-hidden scroll-mt-28"
             id="Projects"
         >
             <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-center">
@@ -103,7 +103,7 @@ const Projects = () => {
             <p className="text-center text-gray-500 max-w-80 mx-auto mb-4">
                 A showcase of our commitment to quality, creativity, and performance
             </p>
-            <div className="flex justify-center">
+            <div className="flex justify-center m-5">
                 <Parent />
             </div>
 
